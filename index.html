@@ -5,98 +5,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>金沢さんぽメモ</title>
 <style>
-:root{
-  --ink:#2b2620; --muted:#7a7264; --line:#e7dfd0;
-  --paper:#faf7f0; --card:#fffdf8;
-  --gold:#b98a2f; --gold-soft:#f3e8cf;
-  --indigo:#31456b; --tea:#5c7350; --plum:#8a4b5e;
-}
-*{box-sizing:border-box}
-body{font-family:"Hiragino Kaku Gothic ProN",system-ui,sans-serif;margin:0;background:var(--paper);color:var(--ink);line-height:1.65}
-header{
-  background:linear-gradient(135deg,#31456b 0%,#4a3f63 55%,#8a4b5e 100%);
-  color:#fff;padding:34px 20px 26px;position:relative;overflow:hidden;
-}
-header::after{content:"";position:absolute;inset:auto -40px -70px auto;width:220px;height:220px;border-radius:50%;
-  background:radial-gradient(circle,rgba(233,201,120,.5),rgba(233,201,120,0) 70%)}
-header .inner{max-width:920px;margin:0 auto;position:relative;z-index:1}
-h1{font-size:1.65em;margin:0 0 4px;letter-spacing:.06em;font-weight:700}
-h1 .accent{color:#e9c978}
-.sub{opacity:.92;font-size:.92em;margin:0}
-.note{opacity:.75;font-size:.8em;margin:8px 0 0}
-main{max-width:920px;margin:0 auto;padding:18px 16px 48px}
-.toolbar{position:sticky;top:0;background:var(--paper);padding:12px 0 10px;z-index:5;border-bottom:1px solid var(--line)}
-input[type=search]{width:100%;padding:12px 14px;font-size:1em;border:1px solid var(--line);border-radius:12px;background:#fff;outline:none}
-input[type=search]:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
-.rowlabel{font-size:.78em;color:var(--muted);margin:10px 0 4px;letter-spacing:.08em}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips button{padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;font-size:.88em;color:var(--ink)}
-.chips button:hover{border-color:var(--gold)}
-.chips button.on{background:var(--indigo);border-color:var(--indigo);color:#fff}
-.count{color:var(--muted);font-size:.85em;margin:14px 2px 4px}
-.card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:16px 18px;margin:12px 0;box-shadow:0 1px 3px rgba(60,50,20,.06)}
-.card.cat-gohan{border-left-color:var(--gold)}
-.card.cat-amami{border-left-color:var(--plum)}
-.card.cat-jitsuyo{border-left-color:var(--tea)}
-.card h2{font-size:1.18em;margin:0 0 2px}
-.meta{color:var(--muted);font-size:.88em;margin:2px 0 8px}
-.badge{display:inline-block;font-size:.75em;padding:1px 9px;border-radius:999px;background:var(--gold-soft);color:#7c5c14;margin-left:8px;vertical-align:2px}
-.tag{display:inline-block;background:#f1ebdd;border-radius:999px;padding:2px 9px;margin:2px 2px 2px 0;font-size:.82em;color:#5d5546}
-.card h3{font-size:.9em;margin:12px 0 2px;color:var(--indigo);letter-spacing:.04em}
-.card p{margin:2px 0}
-.empty{color:var(--muted);text-align:center;padding:32px 0}
-footer{color:var(--muted);font-size:.8em;text-align:center;padding:0 16px 28px}
-@media (max-width:560px){ h1{font-size:1.4em} .card{padding:14px} }
+body{font-family:system-ui,sans-serif;max-width:880px;margin:0 auto;padding:20px;line-height:1.6;color:#222;background:#fff}
+h1{font-size:1.5em;margin:.2em 0} .sub{color:#666;font-size:.9em}
+.memo{border:1px solid #ddd;border-radius:10px;padding:14px 16px;margin:14px 0;background:#fafafa}
+.memo h2{font-size:1.05em;margin:0 0 6px}
+.memo ul{margin:0;padding-left:1.2em}
+input{width:100%;padding:10px;font-size:1em;margin:12px 0 4px;box-sizing:border-box;border:1px solid #ccc;border-radius:8px}
+.rowlabel{font-size:.8em;color:#666;margin:10px 0 2px}
+.chips button{margin:2px;padding:6px 10px;border:1px solid #999;border-radius:999px;background:#fff;cursor:pointer}
+.chips button.on{background:#222;color:#fff}
+.count{color:#666;font-size:.85em;margin:10px 0 0}
+.card{border:1px solid #ddd;border-radius:10px;padding:14px;margin:12px 0}
+.card h2{font-size:1.15em;margin:0 0 4px}
+.card img{width:100%;max-height:320px;object-fit:cover;border-radius:8px;margin:0 0 10px}
+.meta{color:#555;font-size:.9em}
+.tag{display:inline-block;background:#eee;border-radius:999px;padding:2px 8px;margin:2px;font-size:.85em}
+.note{font-size:.85em;color:#666}
+h3{font-size:.95em;margin:10px 0 2px}
+.caution{color:#a33;font-size:.9em}
+.flags{margin-top:10px}
+.flags button{margin-right:6px;padding:5px 12px;border:1px solid #999;border-radius:999px;background:#fff;cursor:pointer}
+.flags button.on{background:#2e7d32;border-color:#2e7d32;color:#fff}
+.flags button.on.visited{background:#555}
 </style>
 </head>
 <body>
-<header>
-  <div class="inner">
-    <h1>金沢<span class="accent">さんぽ</span>メモ</h1>
-    <p class="sub" id="trip"></p>
-    <p class="note">閲覧専用の静的版です。追加・編集は本体のスペースで行い、こちらへ定期的に写します。</p>
-  </div>
-</header>
-<main>
-  <div class="toolbar">
-    <input id="q" type="search" placeholder="店名・メモ・タグで検索">
-    <div class="rowlabel">カテゴリ</div>
-    <div class="chips" id="chips-cat"></div>
-    <div class="rowlabel">エリア</div>
-    <div class="chips" id="chips-area"></div>
-  </div>
-  <div class="count" id="count"></div>
-  <div id="list"></div>
-</main>
-<footer>金沢さんぽメモ — 静的ミラー版</footer>
+<h1>金沢さんぽメモ</h1>
+<p class="sub" id="updated"></p>
+<p class="note">閲覧専用です。追加・編集はスペース「金沢さんぽメモ」が本体で、こちらはその写しです。リンクの追加・調査（Inbox）はありません。行きたい／行ったの切り替えはこの端末にだけ保存されます。</p>
+<section class="memo" id="memo"></section>
+<input id="q" type="search" placeholder="店名・メモ・タグで検索">
+<div class="rowlabel">カテゴリ</div><div class="chips" id="chips-cat"></div>
+<div class="rowlabel">エリア</div><div class="chips" id="chips-area"></div>
+<div class="rowlabel">ジャンル</div><div class="chips" id="chips-genre"></div>
+<div class="rowlabel">条件</div><div class="chips" id="chips-cond"></div>
+<div class="rowlabel">フラグ</div><div class="chips" id="chips-flag"></div>
+<div class="count" id="count"></div>
+<div id="list"></div>
 <script>
-let data=null, activeCat=null, activeArea=null;
-const catClass=c=>c==='甘味'?'cat-amami':(c==='実用'?'cat-jitsuyo':'cat-gohan');
-function chipRow(el, values, get, set){
+let data=null, fCat=null, fArea=null, fGenre=null, fCond=null, fFlag=null;
+let flags=JSON.parse(localStorage.getItem('kanazawa-flags')||'{}');
+function saveFlags(){localStorage.setItem('kanazawa-flags',JSON.stringify(flags));}
+function flagOf(i){const f=flags[i.id]||{};return {want:f.want!==undefined?f.want:i.wantToGo, visited:f.visited!==undefined?f.visited:i.visited};}
+function chipRow(el, values, set){
   el.innerHTML='<button data-v="">すべて</button>'+values.map(v=>`<button data-v="${v}">${v}</button>`).join('');
   el.querySelectorAll('button').forEach(b=>b.onclick=()=>{set(b.dataset.v||null);el.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));render();});
   el.querySelector('button').classList.add('on');
 }
 async function load(){
   const r=await fetch('data.json'); data=await r.json();
-  document.getElementById('trip').textContent=data.trip+'（更新 '+data.updated+'）';
-  chipRow(document.getElementById('chips-cat'),[...new Set(data.items.map(i=>i.category))],()=>activeCat,v=>activeCat=v);
-  chipRow(document.getElementById('chips-area'),[...new Set(data.items.map(i=>i.area).filter(Boolean))],()=>activeArea,v=>activeArea=v);
+  document.getElementById('updated').textContent='更新 '+data.updated;
+  const m=data.memo;
+  document.getElementById('memo').innerHTML=`<h2>${m.title}</h2><ul>${m.lines.map(l=>`<li>${l}</li>`).join('')}</ul>`;
+  chipRow(document.getElementById('chips-cat'),[...new Set(data.items.map(i=>i.category))],v=>fCat=v);
+  chipRow(document.getElementById('chips-area'),[...new Set(data.items.map(i=>i.area).filter(Boolean))],v=>fArea=v);
+  chipRow(document.getElementById('chips-genre'),[...new Set(data.items.flatMap(i=>i.genres))],v=>fGenre=v);
+  chipRow(document.getElementById('chips-cond'),[...new Set(data.items.flatMap(i=>i.conditions))],v=>fCond=v);
+  chipRow(document.getElementById('chips-flag'),['行きたい','行った'],v=>fFlag=v);
   document.getElementById('q').addEventListener('input',render);
   render();
 }
 function render(){
   const q=(document.getElementById('q').value||'').trim();
-  const list=data.items.filter(i=>(!activeCat||i.category===activeCat)&&(!activeArea||i.area===activeArea)&&(!q||(i.name+i.supplement+i.from_photo+i.tags.join(' ')).includes(q)));
+  const list=data.items.filter(i=>{
+    const fl=flagOf(i);
+    return (!fCat||i.category===fCat)&&(!fArea||i.area===fArea)&&(!fGenre||i.genres.includes(fGenre))&&(!fCond||i.conditions.includes(fCond))
+      &&(!fFlag||(fFlag==='行きたい'?fl.want:fl.visited))
+      &&(!q||(i.name+i.postNote+i.photoFindings+i.supplement+i.category+i.area+i.genres.join(' ')+i.conditions.join(' ')).includes(q));
+  });
   document.getElementById('count').textContent=list.length+' 件';
-  document.getElementById('list').innerHTML=list.map(i=>`
-    <article class="card ${catClass(i.category)}">
-      <h2>${i.name}<span class="badge">${i.category}</span></h2>
-      <div class="meta">${[i.area,i.genre,i.hours,i.price,i.address,i.phone].filter(Boolean).join(' ／ ')}</div>
-      <div>${i.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-      ${i.from_photo?`<h3>写真から分かったこと</h3><p>${i.from_photo}</p>`:''}
+  document.getElementById('list').innerHTML=list.map(i=>{
+    const fl=flagOf(i);
+    const tags=[i.category,i.area,...i.genres,...i.conditions].filter(Boolean);
+    return `<article class="card">
+      ${i.images.map(s=>`<img src="${s}" alt="">`).join('')}
+      <h2>${i.name}</h2>
+      <div class="meta">出典：<a href="${i.sourceUrl}" target="_blank" rel="noopener">${i.sourceAuthor} の投稿</a></div>
+      <div>${tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      ${i.postNote?`<h3>メモ</h3><p>${i.postNote}</p>`:''}
+      ${i.photoFindings?`<h3>写真から分かったこと</h3><p>${i.photoFindings}</p>`:''}
       ${i.supplement?`<h3>補足</h3><p>${i.supplement}</p>`:''}
-    </article>`).join('')||'<p class="empty">該当するスポットがありません</p>';
+      ${i.caution?`<p class="caution">注意：${i.caution}</p>`:''}
+      <div class="flags">
+        <button data-id="${i.id}" data-k="want" class="${fl.want?'on':''}">行きたい</button>
+        <button data-id="${i.id}" data-k="visited" class="visited ${fl.visited?'on':''}">行った</button>
+      </div>
+    </article>`;}).join('')||'<p>該当なし</p>';
+  document.querySelectorAll('.flags button').forEach(b=>b.onclick=()=>{
+    const id=b.dataset.id, k=b.dataset.k;
+    const cur=flags[id]||{}; cur[k]=!(k==='want'?flagOf(data.items.find(x=>x.id==id)).want:flagOf(data.items.find(x=>x.id==id)).visited);
+    flags[id]=cur; saveFlags(); render();
+  });
 }
 load();
 </script>
