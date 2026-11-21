@@ -53,7 +53,8 @@ function chipRow(el, values, set){
   el.querySelector('button').classList.add('on');
 }
 async function load(){
-  const r=await fetch('data.json'); data=await r.json();
+  const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'}); data=await r.json();
+  if(!data.memo||!data.items){document.getElementById('list').innerHTML='<p>データを読み込めませんでした。再読み込みしてください。</p>';return;}
   document.getElementById('updated').textContent='更新 '+data.updated;
   const m=data.memo;
   document.getElementById('memo').innerHTML=`<h2>${m.title}</h2><ul>${m.lines.map(l=>`<li>${l}</li>`).join('')}</ul>`;
