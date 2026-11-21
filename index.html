@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>金沢さんぽメモ</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:880px;margin:0 auto;padding:20px;line-height:1.6;color:#222}
+h1{font-size:1.5em;margin:.2em 0} .sub{color:#666;font-size:.9em}
+input{width:100%;padding:10px;font-size:1em;margin:12px 0;box-sizing:border-box}
+.chips button{margin:2px;padding:6px 10px;border:1px solid #999;border-radius:999px;background:#fff;cursor:pointer}
+.chips button.on{background:#222;color:#fff}
+.card{border:1px solid #ddd;border-radius:10px;padding:14px;margin:12px 0}
+.card h2{font-size:1.15em;margin:0 0 4px}
+.meta{color:#555;font-size:.9em}
+.tag{display:inline-block;background:#eee;border-radius:999px;padding:2px 8px;margin:2px;font-size:.85em}
+.note{font-size:.85em;color:#666}
+h3{font-size:.95em;margin:10px 0 2px}
+</style>
+</head>
+<body>
+<h1>金沢さんぽメモ</h1>
+<p class="sub" id="trip"></p>
+<p class="note">閲覧専用です。追加・編集はスペース「金沢さんぽメモ」が本体で、こちらはその写しです。リンクの追加・調査（Inbox）はありません。</p>
+<input id="q" type="search" placeholder="店名・メモ・タグで検索">
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+<script>
+let data=null, active=null;
+async function load(){
+  const r=await fetch('data.json'); data=await r.json();
+  document.getElementById('trip').textContent=data.trip+'（更新 '+data.updated+'）';
+  const cats=[...new Set(data.items.map(i=>i.category))];
+  const chips=document.getElementById('chips');
+  chips.innerHTML='<button data-c="">すべて</button>'+cats.map(c=>`<button data-c="${c}">${c}</button>`).join('');
+  chips.querySelectorAll('button').forEach(b=>b.onclick=()=>{active=b.dataset.c||null;chips.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));render();});
+  chips.querySelector('button').classList.add('on');
+  document.getElementById('q').addEventListener('input',render);
+  render();
+}
+function render(){
+  const q=(document.getElementById('q').value||'').trim();
+  const list=data.items.filter(i=>(!active||i.category===active)&&(!q||(i.name+i.supplement+i.from_photo+i.tags.join(' ')).includes(q)));
+  document.getElementById('list').innerHTML=list.map(i=>`
+    <article class="card">
+      <h2>${i.name}</h2>
+      <div class="meta">${[i.area,i.genre,i.hours,i.price,i.address,i.phone].filter(Boolean).join(' ／ ')}</div>
+      <div>${i.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      ${i.from_photo?`<h3>写真から分かったこと</h3><p>${i.from_photo}</p>`:''}
+      ${i.supplement?`<h3>補足</h3><p>${i.supplement}</p>`:''}
+    </article>`).join('')||'<p>該当なし</p>';
+}
+load();
+</script>
+</body>
+</html>
