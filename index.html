@@ -4,44 +4,82 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>金沢さんぽメモ</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
-body{font-family:system-ui,sans-serif;max-width:880px;margin:0 auto;padding:20px;line-height:1.6;color:#222;background:#fff}
-h1{font-size:1.5em;margin:.2em 0} .sub{color:#666;font-size:.9em}
-.memo{border:1px solid #ddd;border-radius:10px;padding:14px 16px;margin:14px 0;background:#fafafa}
-.memo h2{font-size:1.05em;margin:0 0 6px}
-.memo ul{margin:0;padding-left:1.2em}
-input{width:100%;padding:10px;font-size:1em;margin:12px 0 4px;box-sizing:border-box;border:1px solid #ccc;border-radius:8px}
-.rowlabel{font-size:.8em;color:#666;margin:10px 0 2px}
-.chips button{margin:2px;padding:6px 10px;border:1px solid #999;border-radius:999px;background:#fff;cursor:pointer}
-.chips button.on{background:#222;color:#fff}
-.count{color:#666;font-size:.85em;margin:10px 0 0}
-.card{border:1px solid #ddd;border-radius:10px;padding:14px;margin:12px 0}
-.card h2{font-size:1.15em;margin:0 0 4px}
-.card img{width:100%;max-height:320px;object-fit:cover;border-radius:8px;margin:0 0 10px}
-.meta{color:#555;font-size:.9em}
-.tag{display:inline-block;background:#eee;border-radius:999px;padding:2px 8px;margin:2px;font-size:.85em}
-.note{font-size:.85em;color:#666}
-h3{font-size:.95em;margin:10px 0 2px}
-.caution{color:#a33;font-size:.9em}
-.flags{margin-top:10px}
-.flags button{margin-right:6px;padding:5px 12px;border:1px solid #999;border-radius:999px;background:#fff;cursor:pointer}
-.flags button.on{background:#2e7d32;border-color:#2e7d32;color:#fff}
-.flags button.on.visited{background:#555}
+:root{
+  --ink:#24272c; --muted:#6f7680; --faint:#9aa1ab;
+  --line:#e8eaee; --bg:#fff; --soft:#f7f8fa;
+  --accent:#2f5aa8; --accent-soft:#eef3fc;
+  --gold:#a87f24; --green:#2e7d32;
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 4px 16px rgba(16,24,40,.06);
+}
+*{box-sizing:border-box}
+body{font-family:-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif;margin:0;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:28px 20px 56px}
+header.site{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:18px}
+h1{font-size:1.55em;margin:0;letter-spacing:.04em;font-weight:700}
+h1 span{color:var(--accent)}
+.sub{color:var(--muted);font-size:.88em;margin:4px 0 0}
+.note{color:var(--faint);font-size:.8em;margin:6px 0 0}
+.memo{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 20px}
+.memo h2{font-size:1em;margin:0 0 6px;font-weight:700}
+.memo ul{margin:0;padding-left:1.25em;color:#3c424b}
+.memo li{margin:2px 0}
+#map{height:340px;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0 0 6px;z-index:0}
+.mapnote{color:var(--faint);font-size:.78em;margin:0 0 18px}
+.toolbar{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);padding:12px 0 10px;z-index:500;border-bottom:1px solid var(--line)}
+input[type=search]{width:100%;padding:11px 14px;font-size:1em;border:1px solid var(--line);border-radius:12px;background:var(--soft);outline:none}
+input[type=search]:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px var(--accent-soft)}
+.rowlabel{font-size:.74em;color:var(--faint);margin:10px 0 4px;letter-spacing:.1em;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;font-size:.86em;color:#3c424b;transition:all .15s}
+.chips button:hover{border-color:var(--accent);color:var(--accent)}
+.chips button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.count{color:var(--muted);font-size:.84em;margin:16px 2px 6px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;box-shadow:var(--shadow)}
+.card h2{font-size:1.16em;margin:0 0 2px;font-weight:700}
+.card img{width:100%;max-height:300px;object-fit:cover;border-radius:10px;margin:0 0 12px;display:block}
+.meta{color:var(--muted);font-size:.86em;margin:2px 0 8px}
+.meta a{color:var(--accent);text-decoration:none}
+.meta a:hover{text-decoration:underline}
+.tag{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:1px 9px;margin:2px 2px 2px 0;font-size:.8em;color:#4a515b}
+.card h3{font-size:.88em;margin:13px 0 2px;color:var(--ink);font-weight:700;letter-spacing:.03em}
+.card p{margin:2px 0;color:#33383f}
+.caution{color:#b3261e;font-size:.9em}
+.cardfoot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.flags button,.maplink{padding:5px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;font-size:.86em;color:#3c424b;text-decoration:none}
+.flags button.on{background:var(--green);border-color:var(--green);color:#fff}
+.flags button.on.visited{background:#5b636e;border-color:#5b636e}
+.maplink:hover{border-color:var(--accent);color:var(--accent)}
+.empty{color:var(--muted);text-align:center;padding:36px 0}
+footer{color:var(--faint);font-size:.78em;text-align:center;margin-top:28px}
+.leaflet-popup-content{font-family:inherit;line-height:1.5}
+@media (max-width:560px){ .wrap{padding:20px 14px 44px} #map{height:280px} .card{padding:15px} }
 </style>
 </head>
 <body>
-<h1>金沢さんぽメモ</h1>
-<p class="sub" id="updated"></p>
-<p class="note">閲覧専用です。追加・編集はスペース「金沢さんぽメモ」が本体で、こちらはその写しです。リンクの追加・調査（Inbox）はありません。行きたい／行ったの切り替えはこの端末にだけ保存されます。</p>
-<section class="memo" id="memo"></section>
-<input id="q" type="search" placeholder="店名・メモ・タグで検索">
-<div class="rowlabel">カテゴリ</div><div class="chips" id="chips-cat"></div>
-<div class="rowlabel">エリア</div><div class="chips" id="chips-area"></div>
-<div class="rowlabel">ジャンル</div><div class="chips" id="chips-genre"></div>
-<div class="rowlabel">条件</div><div class="chips" id="chips-cond"></div>
-<div class="rowlabel">フラグ</div><div class="chips" id="chips-flag"></div>
-<div class="count" id="count"></div>
-<div id="list"></div>
+<div class="wrap">
+  <header class="site">
+    <h1>金沢<span>さんぽ</span>メモ</h1>
+    <p class="sub" id="updated"></p>
+    <p class="note">閲覧専用です。追加・編集はスペース「金沢さんぽメモ」が本体で、こちらはその写しです。リンクの追加・調査（Inbox）はありません。行きたい／行ったの切り替えはこの端末にだけ保存されます。</p>
+  </header>
+  <section class="memo" id="memo"></section>
+  <div id="map"></div>
+  <p class="mapnote">ピンは住所が判明しているスポットのみ。すしべんは町域レベルの概略位置です。住所未調査の店は地図に出ていません。</p>
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="店名・メモ・タグで検索">
+    <div class="rowlabel">カテゴリ</div><div class="chips" id="chips-cat"></div>
+    <div class="rowlabel">エリア</div><div class="chips" id="chips-area"></div>
+    <div class="rowlabel">ジャンル</div><div class="chips" id="chips-genre"></div>
+    <div class="rowlabel">条件</div><div class="chips" id="chips-cond"></div>
+    <div class="rowlabel">フラグ</div><div class="chips" id="chips-flag"></div>
+  </div>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+  <footer>金沢さんぽメモ — 静的ミラー版</footer>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let data=null, fCat=null, fArea=null, fGenre=null, fCond=null, fFlag=null;
 let flags=JSON.parse(localStorage.getItem('kanazawa-flags')||'{}');
@@ -54,10 +92,11 @@ function chipRow(el, values, set){
 }
 async function load(){
   const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'}); data=await r.json();
-  if(!data.memo||!data.items){document.getElementById('list').innerHTML='<p>データを読み込めませんでした。再読み込みしてください。</p>';return;}
+  if(!data.memo||!data.items){document.getElementById('list').innerHTML='<p class="empty">データを読み込めませんでした。再読み込みしてください。</p>';return;}
   document.getElementById('updated').textContent='更新 '+data.updated;
   const m=data.memo;
   document.getElementById('memo').innerHTML=`<h2>${m.title}</h2><ul>${m.lines.map(l=>`<li>${l}</li>`).join('')}</ul>`;
+  initMap();
   chipRow(document.getElementById('chips-cat'),[...new Set(data.items.map(i=>i.category))],v=>fCat=v);
   chipRow(document.getElementById('chips-area'),[...new Set(data.items.map(i=>i.area).filter(Boolean))],v=>fArea=v);
   chipRow(document.getElementById('chips-genre'),[...new Set(data.items.flatMap(i=>i.genres))],v=>fGenre=v);
@@ -65,6 +104,18 @@ async function load(){
   chipRow(document.getElementById('chips-flag'),['行きたい','行った'],v=>fFlag=v);
   document.getElementById('q').addEventListener('input',render);
   render();
+}
+function initMap(){
+  const pts=data.items.filter(i=>i.lat&&i.lng);
+  if(!pts.length||typeof L==='undefined'){document.getElementById('map').style.display='none';return;}
+  const map=L.map('map');
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+  const bounds=[];
+  pts.forEach(i=>{
+    bounds.push([i.lat,i.lng]);
+    L.marker([i.lat,i.lng]).addTo(map).bindPopup(`<strong>${i.name}</strong><br>${[i.area,i.genres.join('・')].filter(Boolean).join(' ／ ')}<br><a href="#spot-${i.id}">カードを見る</a>`);
+  });
+  map.fitBounds(bounds,{padding:[28,28]});
 }
 function render(){
   const q=(document.getElementById('q').value||'').trim();
@@ -78,8 +129,9 @@ function render(){
   document.getElementById('list').innerHTML=list.map(i=>{
     const fl=flagOf(i);
     const tags=[i.category,i.area,...i.genres,...i.conditions].filter(Boolean);
-    return `<article class="card">
-      ${i.images.map(s=>`<img src="${s}" alt="">`).join('')}
+    const gq=encodeURIComponent(i.name+' 金沢');
+    return `<article class="card" id="spot-${i.id}">
+      ${i.images.map(s=>`<img src="${s}" alt="" loading="lazy">`).join('')}
       <h2>${i.name}</h2>
       <div class="meta">出典：<a href="${i.sourceUrl}" target="_blank" rel="noopener">${i.sourceAuthor} の投稿</a></div>
       <div>${tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
@@ -87,14 +139,15 @@ function render(){
       ${i.photoFindings?`<h3>写真から分かったこと</h3><p>${i.photoFindings}</p>`:''}
       ${i.supplement?`<h3>補足</h3><p>${i.supplement}</p>`:''}
       ${i.caution?`<p class="caution">注意：${i.caution}</p>`:''}
-      <div class="flags">
+      <div class="cardfoot flags">
         <button data-id="${i.id}" data-k="want" class="${fl.want?'on':''}">行きたい</button>
         <button data-id="${i.id}" data-k="visited" class="visited ${fl.visited?'on':''}">行った</button>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=${gq}" target="_blank" rel="noopener">Googleマップで開く</a>
       </div>
-    </article>`;}).join('')||'<p>該当なし</p>';
+    </article>`;}).join('')||'<p class="empty">該当するスポットがありません</p>';
   document.querySelectorAll('.flags button').forEach(b=>b.onclick=()=>{
-    const id=b.dataset.id, k=b.dataset.k;
-    const cur=flags[id]||{}; cur[k]=!(k==='want'?flagOf(data.items.find(x=>x.id==id)).want:flagOf(data.items.find(x=>x.id==id)).visited);
+    const id=b.dataset.id, k=b.dataset.k, item=data.items.find(x=>x.id==id), cur0=flagOf(item);
+    const cur=flags[id]||{}; cur[k]=!(k==='want'?cur0.want:cur0.visited);
     flags[id]=cur; saveFlags(); render();
   });
 }

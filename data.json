@@ -19,7 +19,10 @@
    "supplement": "しら玉生麩 税込1,200円。営業10:00〜17:00（L.O.16:15）。電話076-255-2260。ひがし茶屋街は食べ歩き禁止エリア。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/IGh3rUZJgeO705I/status/2123959569714229447"
+   "sourceUrl": "https://x.com/IGh3rUZJgeO705I/status/2123959569714229447",
+   "lat": 36.5723906,
+   "lng": 136.6680239,
+   "coordApprox": false
   },
   {
    "area": "片町・香林坊",
@@ -44,7 +47,10 @@
    "supplement": "ハントンライス1,350円・小1,250円。片町2-9-15。11:00〜15:20（L.O.14:45）／17:00〜20:30（L.O.19:50）。水曜定休。予約不可。香林坊バス停から徒歩5分。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/otakubatubyou/status/2123687812566569267"
+   "sourceUrl": "https://x.com/otakubatubyou/status/2123687812566569267",
+   "lat": 36.5619414,
+   "lng": 136.6519361,
+   "coordApprox": false
   },
   {
    "area": "近江町市場",
@@ -65,7 +71,10 @@
    "supplement": "9:00〜17:00（L.O.16:30）。火・水定休（土日営業）。車麩180円・ばい貝350円・えび面600円・のど黒面900円。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/otakubatubyou/status/2123687812566569267"
+   "sourceUrl": "https://x.com/otakubatubyou/status/2123687812566569267",
+   "lat": 36.5712819,
+   "lng": 136.6568692,
+   "coordApprox": false
   },
   {
    "area": "近江町市場",
@@ -86,7 +95,10 @@
    "supplement": "公式では通常11:00〜17:00・土日祝10:30〜・水曜〜15:30・元日のみ休。40席。近江町海鮮丼2,900円。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/otakubatubyou/status/2123687812566569267"
+   "sourceUrl": "https://x.com/otakubatubyou/status/2123687812566569267",
+   "lat": 36.5715847,
+   "lng": 136.6561303,
+   "coordApprox": false
   },
   {
    "area": "金沢駅",
@@ -110,7 +122,10 @@
    "supplement": "金沢百番街あんと西1F（金沢駅から30m）。11:00〜21:00（L.O.20:30）。予約不可。カニ面なし。帰りの新幹線前にも使える。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/otakubatubyou/status/2123687812566569267"
+   "sourceUrl": "https://x.com/otakubatubyou/status/2123687812566569267",
+   "lat": 36.5789114,
+   "lng": 136.6483744,
+   "coordApprox": false
   },
   {
    "area": "",
@@ -281,7 +296,10 @@
    "supplement": "公式店舗名は野々市二日市店。野々市市二日市町2丁目128。24時間営業・年中無休。支払いは現金。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/Abydos_Shiroko_/status/2121583331028648106"
+   "sourceUrl": "https://x.com/Abydos_Shiroko_/status/2121583331028648106",
+   "lat": 36.5444853,
+   "lng": 136.6025853,
+   "coordApprox": true
   },
   {
    "area": "金沢駅",
@@ -302,7 +320,10 @@
    "supplement": "",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/pearsourddnkb/status/2121004393717964915"
+   "sourceUrl": "https://x.com/pearsourddnkb/status/2121004393717964915",
+   "lat": 36.5789114,
+   "lng": 136.6483744,
+   "coordApprox": false
   }
  ],
  "memo": {
