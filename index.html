@@ -100,15 +100,15 @@ footer{color:var(--faint);font-size:.78em;text-align:center;margin-top:28px}
   <div id="map"></div>
   <p class="mapnote">ピンは住所が判明しているスポットのみ。すしべんは町域レベルの概略位置です。住所未調査の店は地図に出ていません。</p>
   <div class="toolbar">
-    <input id="q" type="search" placeholder="店名・メモ・タグで検索">
+    <input id="q" type="search" placeholder="店名・メモ・タグで検索（空白で区切るとAND）">
     <button class="tbtn" id="filterbtn">絞り込み<span class="n" id="filternum" hidden>0</span></button>
     <button class="tbtn" id="viewbtn">リスト表示</button>
   </div>
   <div class="panel" id="panel" hidden>
     <div class="rowlabel">カテゴリ</div><div class="chips" id="chips-cat"></div>
     <div class="rowlabel">エリア</div><div class="chips" id="chips-area"></div>
-    <div class="rowlabel">ジャンル</div><div class="chips" id="chips-genre"></div>
-    <div class="rowlabel">条件</div><div class="chips" id="chips-cond"></div>
+    <div class="rowlabel">ジャンル（複数選ぶとAND検索）</div><div class="chips" id="chips-genre"></div>
+    <div class="rowlabel">条件（複数選ぶとAND検索）</div><div class="chips" id="chips-cond"></div>
     <div class="rowlabel">フラグ</div><div class="chips" id="chips-flag"></div>
   </div>
   <div class="count" id="count"></div>
@@ -118,18 +118,23 @@ footer{color:var(--faint);font-size:.78em;text-align:center;margin-top:28px}
 <button id="totop" title="トップへ戻る">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-let data=null, fCat=null, fArea=null, fGenre=null, fCond=null, fFlag=null;
+let data=null, fCat=null, fArea=null, fFlag=null;
+const fGenre=new Set(), fCond=new Set();
 let view=localStorage.getItem('kanazawa-view')||'grid';
 let flags=JSON.parse(localStorage.getItem('kanazawa-flags')||'{}');
 function saveFlags(){localStorage.setItem('kanazawa-flags',JSON.stringify(flags));}
 function flagOf(i){const f=flags[i.id]||{};return {want:f.want!==undefined?f.want:i.wantToGo, visited:f.visited!==undefined?f.visited:i.visited};}
 function catClass(c){return c==='甘味'?'cat-amami':(c==='実用'?'cat-jitsuyo':'cat-gohan');}
 function tagsHtml(i){const tags=[i.category,i.area,...i.genres,...i.conditions].filter(Boolean);return tags.map((t,ix)=>`<span class="tag${ix===0?' t-cat':''}">${t}</span>`).join('');}
-function activeCount(){return [fCat,fArea,fGenre,fCond,fFlag].filter(Boolean).length;}
+function activeCount(){return [fCat,fArea,fFlag].filter(Boolean).length+fGenre.size+fCond.size;}
 function chipRow(el, values, set){
   el.innerHTML='<button data-v="">すべて</button>'+values.map(v=>`<button data-v="${v}">${v}</button>`).join('');
   el.querySelectorAll('button').forEach(b=>b.onclick=()=>{set(b.dataset.v||null);el.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));syncFilterBadge();render();});
   el.querySelector('button').classList.add('on');
+}
+function chipMulti(el, values, set){
+  el.innerHTML=values.map(v=>`<button data-v="${v}">${v}</button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>{const v=b.dataset.v;set.has(v)?set.delete(v):set.add(v);b.classList.toggle('on',set.has(v));syncFilterBadge();render();});
 }
 function syncFilterBadge(){const n=activeCount(),el=document.getElementById('filternum');el.hidden=n===0;el.textContent=n;}
 async function load(){
@@ -141,8 +146,8 @@ async function load(){
   initMap();
   chipRow(document.getElementById('chips-cat'),[...new Set(data.items.map(i=>i.category))],v=>fCat=v);
   chipRow(document.getElementById('chips-area'),[...new Set(data.items.map(i=>i.area).filter(Boolean))],v=>fArea=v);
-  chipRow(document.getElementById('chips-genre'),[...new Set(data.items.flatMap(i=>i.genres))],v=>fGenre=v);
-  chipRow(document.getElementById('chips-cond'),[...new Set(data.items.flatMap(i=>i.conditions))],v=>fCond=v);
+  chipMulti(document.getElementById('chips-genre'),[...new Set(data.items.flatMap(i=>i.genres))],fGenre);
+  chipMulti(document.getElementById('chips-cond'),[...new Set(data.items.flatMap(i=>i.conditions))],fCond);
   chipRow(document.getElementById('chips-flag'),['行きたい','行った'],v=>fFlag=v);
   document.getElementById('q').addEventListener('input',render);
   const panel=document.getElementById('panel');
@@ -181,12 +186,14 @@ function footHtml(i,fl){
   </div>`;
 }
 function render(){
-  const q=(document.getElementById('q').value||'').trim();
+  const words=(document.getElementById('q').value||'').trim().split(/\s+/).filter(Boolean);
   const list=data.items.filter(i=>{
     const fl=flagOf(i);
-    return (!fCat||i.category===fCat)&&(!fArea||i.area===fArea)&&(!fGenre||i.genres.includes(fGenre))&&(!fCond||i.conditions.includes(fCond))
+    const hay=i.name+i.postNote+i.photoFindings+i.supplement+i.category+i.area+i.genres.join(' ')+i.conditions.join(' ');
+    return (!fCat||i.category===fCat)&&(!fArea||i.area===fArea)
+      &&[...fGenre].every(g=>i.genres.includes(g))&&[...fCond].every(c=>i.conditions.includes(c))
       &&(!fFlag||(fFlag==='行きたい'?fl.want:fl.visited))
-      &&(!q||(i.name+i.postNote+i.photoFindings+i.supplement+i.category+i.area+i.genres.join(' ')+i.conditions.join(' ')).includes(q));
+      &&words.every(w=>hay.includes(w));
   });
   document.getElementById('count').textContent=list.length+' 件';
   const box=document.getElementById('list');
