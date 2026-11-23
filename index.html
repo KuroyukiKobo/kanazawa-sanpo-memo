@@ -100,15 +100,15 @@ footer{color:var(--faint);font-size:.78em;text-align:center;margin-top:28px}
   <div id="map"></div>
   <p class="mapnote">ピンは住所が判明しているスポットのみ。すしべんは町域レベルの概略位置です。住所未調査の店は地図に出ていません。</p>
   <div class="toolbar">
-    <input id="q" type="search" placeholder="店名・メモ・タグで検索（空白で区切るとAND）">
+    <input id="q" type="search" placeholder="店名・メモ・タグで検索（空白で区切るとOR）">
     <button class="tbtn" id="filterbtn">絞り込み<span class="n" id="filternum" hidden>0</span></button>
     <button class="tbtn" id="viewbtn">リスト表示</button>
   </div>
   <div class="panel" id="panel" hidden>
     <div class="rowlabel">カテゴリ</div><div class="chips" id="chips-cat"></div>
     <div class="rowlabel">エリア</div><div class="chips" id="chips-area"></div>
-    <div class="rowlabel">ジャンル（複数選ぶとAND検索）</div><div class="chips" id="chips-genre"></div>
-    <div class="rowlabel">条件（複数選ぶとAND検索）</div><div class="chips" id="chips-cond"></div>
+    <div class="rowlabel">ジャンル（複数選ぶとOR検索）</div><div class="chips" id="chips-genre"></div>
+    <div class="rowlabel">条件（複数選ぶとOR検索）</div><div class="chips" id="chips-cond"></div>
     <div class="rowlabel">フラグ</div><div class="chips" id="chips-flag"></div>
   </div>
   <div class="count" id="count"></div>
@@ -191,9 +191,9 @@ function render(){
     const fl=flagOf(i);
     const hay=i.name+i.postNote+i.photoFindings+i.supplement+i.category+i.area+i.genres.join(' ')+i.conditions.join(' ');
     return (!fCat||i.category===fCat)&&(!fArea||i.area===fArea)
-      &&[...fGenre].every(g=>i.genres.includes(g))&&[...fCond].every(c=>i.conditions.includes(c))
+      &&(fGenre.size===0||[...fGenre].some(g=>i.genres.includes(g)))&&(fCond.size===0||[...fCond].some(c=>i.conditions.includes(c)))
       &&(!fFlag||(fFlag==='行きたい'?fl.want:fl.visited))
-      &&words.every(w=>hay.includes(w));
+      &&(words.length===0||words.some(w=>hay.includes(w)));
   });
   document.getElementById('count').textContent=list.length+' 件';
   const box=document.getElementById('list');
