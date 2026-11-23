@@ -569,7 +569,7 @@
    "images": [],
    "name": "シフクノオト 金澤寿司Dining",
    "photoFindings": "写真は未確認：Xの投稿写真はブラウザで開こうとしたがボットチェックに阻まれ内容を読み取れなかった。",
-   "postNote": "2026-11-21の投稿（@0CDRRCsWpS6RWfs）。引用元投稿では「金沢さんぽ1日目お疲れ様でした！ということで飲みます。ノドグロが脂乗ってて最高に美味しいんですけど……1日の疲れがとける」とあり、本投稿では「こちらはシフクノオトというお店 本当に美味しかったです、ごちそうさまでした」と紹介されている。",
+   "postNote": "2026-11-21の投稿（@0CDRRCsWpS6RWfs）。引用元投稿では「金沢さんぽ1日目お疲れ様でした！ということで飲みます。ノドグロが脂乗ってて最高に美味しいんですけど……1日の疲れがとれる」とあり、本投稿では「こちらはシフクノオトというお店 本当に美味しかったです、ごちそうさまでした」と紹介されている。",
    "sourceAuthor": "@0CDRRCsWpS6RWfs",
    "sourceUrl": "https://x.com/0CDRRCsWpS6RWfs/status/2124080417464844381",
    "supplement": "公式サイト（shifukunooto111.owst.jp）より：海鮮居酒屋 シフクノオト 金澤寿司Dining。住所は石川県金沢市高岡町12-45、近江町市場近く・南町交差点付近。電話076-256-0429。営業時間は火〜土・祝前日17:30〜22:00（L.O.21:30）、日17:30〜21:30（L.O.21:00）、定休日は月曜。平均予算は夜5,001〜6,000円、お席料（お通し代）680円。クレジットカード可、PayPay可、電子マネー不可、全席禁煙。名物は階段寿司、スタンダードコース全9品5,500円、冬季限定の香箱がにコース（11/8〜）あり。ネット予約可（ホットペッパー経由）。",
@@ -712,6 +712,177 @@
    "supplement": "開催期間2026年11月13日（金）〜12月13日（日）。金沢市内の各所に設置されたパネルの二次元コードを読み込むデジタルスタンプラリー。周遊先：中島めんや（近江町いちば館B1F）、金箔屋さくだ本店、しいのき迎賓館、中村記念美術館、石川県立歴史博物館、長町武家屋敷休憩館、アニメイト金沢（景品引換）、金沢フォーラス（景品引換は11/23まで）。コラボフード店のハムアンドゴー橋場町スタンド・金箔屋さくだ茶屋街店もルート上にある（周遊ルート紹介記事による）。コンプリート特典は記念メダル（金沢）、引換は1人1日1回まで。複数日に分けての参加可。商品購入なしでも参加可。定休日は等身大パネルの掲出はなく代替のスタンプ獲得パネルが用意される。情報源：公式特設ページ（bluearchive-5thstamp.jp/kanazawa/）。",
    "visited": false,
    "wantToGo": false
+  },
+  {
+   "area": "金沢市内",
+   "category": "スポット",
+   "caution": "",
+   "conditions": [
+    "スタンプ対象"
+   ],
+   "genres": [
+    "スタンプラリー"
+   ],
+   "id": 35,
+   "images": [],
+   "name": "石川県政記念 しいのき迎賓館",
+   "photoFindings": "",
+   "postNote": "スタンプラリー周遊先③ 金沢市内。スタンプは1階カフェ＆ブラッスリー ポール・ボキューズ前（9:00〜22:00・入場無料という案内あり）。",
+   "sourceAuthor": "公式サイト",
+   "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
+   "supplement": "石川県金沢市広坂2-1-1。営業時間は公式HPで要確認。",
+   "visited": false,
+   "wantToGo": false
+  },
+  {
+   "area": "金沢市内",
+   "category": "スポット",
+   "caution": "",
+   "conditions": [
+    "スタンプ対象"
+   ],
+   "genres": [
+    "スタンプラリー"
+   ],
+   "id": 36,
+   "images": [],
+   "name": "石川県立歴史博物館",
+   "photoFindings": "",
+   "postNote": "スタンプラリー周遊先③ 金沢市内。",
+   "sourceAuthor": "公式サイト",
+   "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
+   "supplement": "石川県金沢市出羽町3-1。開館時間・休館日は公式HPで要確認。",
+   "visited": false,
+   "wantToGo": false
+  },
+  {
+   "area": "金沢市内",
+   "category": "スポット",
+   "caution": "",
+   "conditions": [
+    "スタンプ対象"
+   ],
+   "genres": [
+    "スタンプラリー"
+   ],
+   "id": 37,
+   "images": [],
+   "name": "金沢市立中村記念美術館",
+   "photoFindings": "",
+   "postNote": "スタンプラリー周遊先③ 金沢市内。",
+   "sourceAuthor": "公式サイト",
+   "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
+   "supplement": "石川県金沢市本多町3-2-29。開館時間・休館日は公式HPで要確認。",
+   "visited": false,
+   "wantToGo": false
+  },
+  {
+   "area": "近江町市場",
+   "category": "スポット",
+   "caution": "",
+   "conditions": [
+    "スタンプ対象"
+   ],
+   "genres": [
+    "スタンプラリー"
+   ],
+   "id": 38,
+   "images": [],
+   "name": "中島めんや（近江町市場）",
+   "photoFindings": "",
+   "postNote": "スタンプラリー周遊先① 近江町市場。パネルの二次元コードを読み込んでスタンプ取得。",
+   "sourceAuthor": "公式サイト",
+   "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
+   "supplement": "石川県金沢市青草町88 近江町いちば館B1F。営業時間は公式HPで要確認。",
+   "visited": false,
+   "wantToGo": false
+  },
+  {
+   "area": "ひがし茶屋街・東山",
+   "category": "スポット",
+   "caution": "",
+   "conditions": [
+    "スタンプ対象"
+   ],
+   "genres": [
+    "スタンプラリー",
+    "金箔"
+   ],
+   "id": 39,
+   "images": [],
+   "name": "金箔屋さくだ 本店（ひがし茶屋街）",
+   "photoFindings": "",
+   "postNote": "スタンプラリー周遊先② ひがし茶屋街。リツのパネルがある場所。既存の店カードと同一店舗（スタンプ用に別枠で登録）。",
+   "sourceAuthor": "公式サイト",
+   "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
+   "supplement": "石川県金沢市東山1-3-27。営業時間は公式HPで要確認。",
+   "visited": false,
+   "wantToGo": false
+  },
+  {
+   "area": "金沢市内",
+   "category": "スポット",
+   "caution": "",
+   "conditions": [
+    "スタンプ対象"
+   ],
+   "genres": [
+    "スタンプラリー"
+   ],
+   "id": 40,
+   "images": [],
+   "name": "長町武家屋敷休憩館",
+   "photoFindings": "",
+   "postNote": "スタンプラリー周遊先③ 金沢市内。",
+   "sourceAuthor": "公式サイト",
+   "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
+   "supplement": "石川県金沢市長町2-4-36。営業時間は公式HPで要確認。",
+   "visited": false,
+   "wantToGo": false
+  },
+  {
+   "area": "金沢市内",
+   "category": "スポット",
+   "caution": "",
+   "conditions": [
+    "スタンプ対象",
+    "景品引換"
+   ],
+   "genres": [
+    "スタンプラリー"
+   ],
+   "id": 41,
+   "images": [],
+   "name": "アニメイト金沢",
+   "photoFindings": "",
+   "postNote": "スタンプラリー周遊先③ 金沢市内。景品引換所も兼ねる。コンプリート特典は記念メダル（金沢）、引換は1日1回まで。",
+   "sourceAuthor": "公式サイト",
+   "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
+   "supplement": "石川県金沢市竪町24。営業時間は公式HPで要確認。",
+   "visited": false,
+   "wantToGo": false
+  },
+  {
+   "area": "金沢駅",
+   "category": "スポット",
+   "caution": "11月28〜29日の訪問時点では特設催事期間は終了している。景品引換はアニメイト金沢側の案内を確認すること。",
+   "conditions": [
+    "スタンプ対象",
+    "景品引換"
+   ],
+   "genres": [
+    "スタンプラリー"
+   ],
+   "id": 42,
+   "images": [],
+   "name": "金沢フォーラス",
+   "photoFindings": "",
+   "postNote": "スタンプラリー周遊先④ 金沢駅。特設催事（グッズ販売・フォトスポット）と景品引換は2026年11月13日〜11月23日まで。以後の販売店舗は別途案内と公式にあり。",
+   "sourceAuthor": "公式サイト",
+   "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
+   "supplement": "石川県金沢市堀川新町3-1。営業時間は公式HPで要確認。",
+   "visited": false,
+   "wantToGo": false
   }
  ],
  "memo": {
@@ -719,10 +890,10 @@
    "行き：11月28日 かがやき503号 東京 07:20 → 金沢 09:44",
    "帰り：11月29日 かがやき516号 金沢 19:21 → 東京 21:56",
    "宿：金沢マンテンホテル駅前（朝食付き）／チェックイン 15:00・チェックアウト 11:00",
-   "ブルアカ「金沢さんぽ♪」スタンプラリー開催期間：2026年11月13日〜12月12日"
+   "ブルアカ「金沢さんぽ♪」スタンプラリー開催期間：2026年11月13日〜12月13日"
   ],
   "title": "金沢旅行メモ（2026年11月28日〜29日）"
  },
  "title": "金沢さんぽメモ",
- "updated": "2026-11-22"
+ "updated": "2026-11-23"
 }
