@@ -186,7 +186,10 @@
    "supplement": "",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/urt0616/status/2121558025039438220"
+   "sourceUrl": "https://x.com/urt0616/status/2121558025039438220",
+   "lat": 36.5789114,
+   "lng": 136.6483744,
+   "coordApprox": true
   },
   {
    "area": "",
@@ -247,7 +250,10 @@
    "supplement": "",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/urt0616/status/2121558025039438220"
+   "sourceUrl": "https://x.com/urt0616/status/2121558025039438220",
+   "lat": 36.5788864,
+   "lng": 136.6523217,
+   "coordApprox": false
   },
   {
    "area": "",
@@ -381,7 +387,10 @@
    "sourceUrl": "https://x.com/Kuro00700942/status/2121949667927937226?a=GwA0jQtrNNKGn0YSfts&s=20",
    "supplement": "住所：石川県金沢市観音町1-1-2。電話：076-208-3345。築約150年の町家を改修した甘味処で、石川県のご当地キャラクターを象った県内初の焼き菓子「ひゃくまん焼き」を販売（公式サイト takamiya-100.com）。味は定番のあんこ、カスタードクリーム、豆腐レアチーズのほか季節限定あり。手作り雑貨の販売やお部屋レンタルもあり。定休日：火曜日・水曜日。営業時間：平日10:30〜18:00、土・日・祝日10:00〜18:00（ひがし茶屋街店舗一覧による）。ひゃくまん焼きの価格は信頼できる情報源で確認できなかったため未記載。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5723711,
+   "lng": 136.6650656,
+   "coordApprox": false
   },
   {
    "area": "ひがし茶屋街・東山",
@@ -402,7 +411,10 @@
    "sourceUrl": "https://x.com/Kuro00700942/status/2121949667927937226?a=GwA0jQtrNNKGn0YSfts&s=20",
    "supplement": "住所：〒920-0831 石川県金沢市東山1-3-27。電話：076-251-6777。1919年創業の老舗金箔屋。本店では金箔製造工程の工場見学、金箔貼り体験、金箔ミニ博物館、工芸品ショップなどがある（公式サイト）。ひがし茶屋街から約100m。ブルーアーカイブ金沢スタンプラリーではリツのスタンプ地点として参加者ブログでも確認できる。営業時間：9:00〜17:00（公式会社案内、季節により変動）。定休日は年中無休とする案内あり。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5739711,
+   "lng": 136.6663183,
+   "coordApprox": false
   },
   {
    "area": "",
@@ -446,7 +458,10 @@
    "sourceUrl": "https://x.com/YUBADON0130/status/2122497748306219046?a=MAO7M0wgng3sv7GOwPo&s=20",
    "supplement": "住所: 石川県金沢市下堤町19-7（近江町市場エリア、公式サイトのタイトルも「金沢市近江町」）。営業時間: 7:00〜14:30（Google系・Wanderlog・Restaurant Guruなど複数情報源で一致）。電話: 076-254-6336。公式: noukabanzai.jp/tonariya（2階席ありとの記載）。のど黒釜飯1品専門の店という口コミが複数あり、注文後に炊き上げるため提供まで約20分。食べ方は3通り（そのまま／薬味をのせて／のどぐろ出汁をかけてお茶漬け）が口コミ・レビューで紹介され、写真の構成（いくら・薬味・出汁ポット）とも一致する。お吸い物の蓮根饅頭もレビューで言及あり。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5708514,
+   "lng": 136.6560442,
+   "coordApprox": false
   },
   {
    "area": "金沢駅",
@@ -469,7 +484,10 @@
    "sourceUrl": "https://x.com/sakusakubou12/status/2124093550212391362?a=zZeOPpUOBO47_dlQ8SM&s=20",
    "supplement": "住所：金沢市堀川町4-22。金沢駅東口から徒歩3〜5分（KKdayは徒歩3分、VISIT KANAZAWA公式ガイドは徒歩5分）。営業時間16:00〜23:00、定休日は不定休。電話076-231-1235。店内に大きな生簀がある海鮮居酒屋で、金沢港直送の海鮮と鰹出汁の金沢おでんが売り。おでんにはバイ貝・車麩など地元具材、盛り合わせもあり。石川の地酒も揃う（VISIT KANAZAWA／KKday調べ）。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5785947,
+   "lng": 136.65163,
+   "coordApprox": false
   },
   {
    "area": "",
@@ -494,7 +512,10 @@
    "sourceUrl": "https://x.com/nulo_for_vtuber/status/2121828562529378695?a=ZXbPLsxQtqr6sZLrPBw&s=20",
    "supplement": "金沢を代表する本格回転寿司チェーン。金沢港・能登方面から仕入れる地魚が売りで、看板ネタはのど黒（のどぐろ）、白えび、がすえび、ばい貝など。のど黒は2貫で約900〜1,100円が目安とされる（情報源により変動あり）。主な金沢市内の店舗: 本店=金沢市駅西新町3-20-7、11:00〜21:30（L.O.21:00）、年中無休、電話076-234-1144、Google評価4.3との情報あり／金沢駅店=金沢百番街あんと内（金沢市木ノ新保町1-1）、11:00〜22:00。両店とも席の事前予約は不可で、ピーク時は行列・長時間待ちになる人気店（金沢駅店は店頭の整理券発券制）。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5937156,
+   "lng": 136.6357164,
+   "coordApprox": true
   },
   {
    "area": "近江町市場",
@@ -517,7 +538,10 @@
    "sourceUrl": "https://x.com/Kuro00700942/status/2121476319334793639?a=ypcUmyxJzSggjiy9_Hw&s=20",
    "supplement": "近江町市場内のカウンター8席の小さなカレー店で、ゴールドカレーが展開する新業態として2023年オープン。住所：石川県金沢市十間町27-2（近江町市場内）／電話076-255-1044。営業時間10:00〜15:30・18:00〜22:00、定休日は水曜日。ルーは「金の金沢カレー」「黒のキーマカレー」「赤のバターチキンカレー」の3種類から選べ、辛さ・ライス・20種類以上のトッピングをカスタマイズできる。能登豚のカツなどのトッピングが人気と紹介されている。ハントンライスも扱うという紹介もある。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5707653,
+   "lng": 136.6562219,
+   "coordApprox": false
   },
   {
    "area": "片町・香林坊",
@@ -540,7 +564,10 @@
    "sourceUrl": "https://x.com/YamadaiDayo/status/2124117947245637669?a=SzXvBU4skaMx6G9RM8s&s=19",
    "supplement": "住所：石川県金沢市片町1-5-29。電話076-261-8700。営業時間11:00～15:00／17:00～21:00、定休日は火曜日。金沢駅東口からバスで「片町」下車徒歩約3分。名物は秘伝のタレで味わう「とんばら定食」（普通850～950円前後、肉W 1,150～1,300円前後との情報あり）。食べログの定食百名店にも選ばれた片町の老舗大衆食堂。専用駐車場なし。昼のピーク（12:00～13:30）は行列ができやすい。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5601506,
+   "lng": 136.6532142,
+   "coordApprox": false
   },
   {
    "area": "金沢駅",
@@ -564,7 +591,10 @@
    "sourceUrl": "https://x.com/YamadaiDayo/status/2124117947245637669?a=SzXvBU4skaMx6G9RM8s&s=19",
    "supplement": "住所：石川県金沢市堀川町6-3。電話076-260-7737。営業時間は昼11:30～15:00／夜17:30～23:00（L.O.22:50）、定休日は月曜日。金沢駅東口から徒歩約4分。味噌ラーメン専門店で食べログ百名店にも選ばれる人気店。看板の味噌ラーメンは1,080円との情報あり（別情報源では980円～）。イカ墨の黒味噌や赤味噌、能登豚チャーシューも評判。全12席、専用駐車場なし。スープ切れで早仕舞いすることがある。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5788864,
+   "lng": 136.6523217,
+   "coordApprox": false
   },
   {
    "area": "ひがし茶屋街・東山",
@@ -585,7 +615,10 @@
    "sourceUrl": "https://x.com/YamadaiDayo/status/2124117947245637669?a=SzXvBU4skaMx6G9RM8s&s=19",
    "supplement": "昼は親子丼のみ、夜は焼き鳥の店。食べログ百名店にも選ばれたとされる。とろとろの親子丼と濃厚なプリンが人気。電話076-251-1306。クレジットカード・PayPay可との情報あり。住所・営業時間は情報源で大きく食い違うためcaution参照。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5726461,
+   "lng": 136.6652406,
+   "coordApprox": true
   },
   {
    "area": "近江町市場",
@@ -610,7 +643,10 @@
    "sourceUrl": "https://x.com/0CDRRCsWpS6RWfs/status/2124080417464844381",
    "supplement": "公式サイト（shifukunooto111.owst.jp）より：海鮮居酒屋 シフクノオト 金澤寿司Dining。住所は石川県金沢市高岡町12-45、近江町市場近く・南町交差点付近。電話076-256-0429。営業時間は火〜土・祝前日17:30〜22:00（L.O.21:30）、日17:30〜21:30（L.O.21:00）、定休日は月曜。平均予算は夜5,001〜6,000円、お席料（お通し代）680円。クレジットカード可、PayPay可、電子マネー不可、全席禁煙。名物は階段寿司、スタンダードコース全9品5,500円、冬季限定の香箱がにコース（11/8〜）あり。ネット予約可（ホットペッパー経由）。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5679497,
+   "lng": 136.65305,
+   "coordApprox": false
   },
   {
    "area": "片町・香林坊",
@@ -633,7 +669,10 @@
    "sourceUrl": "https://x.com/sakusakubou12/status/2124051950400577708?a=2E5mM4WZ7nt3e1w-7Lo&s=20",
    "supplement": "住所：石川県金沢市広坂1-1-48 ウナシンビル1F（21世紀美術館近く・香林坊エリア）。1971年創業の金沢カレーの老舗。人気メニュー：No.1ロースカツカレー、No.2 Lセット（ロースカツ・ハンバーグ・ウィンナの3点盛り）、No.3エビフライカレー。ロースカツカレーの価格（2026-09-20訪問時の掲示）：小1,000円・中1,050円・大1,200円・特大1,350円。定休日：年中無休（年末年始を除く）とする情報が複数。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5619053,
+   "lng": 136.6551889,
+   "coordApprox": false
   },
   {
    "area": "",
@@ -656,7 +695,10 @@
    "sourceUrl": "https://x.com/m4c4_p/status/2124136055180034132",
    "supplement": "金沢発の回転寿司（能登前寿司）。名物はのどぐろ三点盛・白えび・がすえび・北陸五品盛りなど。皿は140円台〜1,000円超の色分け価格で、客単価の目安は3,500〜5,500円程度（情報源により幅あり）。金沢市内の主な店舗：近江町市場店（金沢市青草町88 近江町いちば館1F、8:00〜17:00頃）、金沢駅前店（金沢フォーラス6F、11:00〜22:00前後）、片町店。近江町市場店は事前予約不可・店頭整理券制で、ピーク時は90〜180分待ちとの情報あり。地酒・天狗舞も置いている。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5715847,
+   "lng": 136.6561303,
+   "coordApprox": true
   },
   {
    "area": "ひがし茶屋街・東山",
@@ -677,7 +719,10 @@
    "sourceUrl": "https://x.com/Rachel00717513/status/2123984176768835973?a=4DJkCJoj2A4v4abEJQM&s=20",
    "supplement": "住所：石川県金沢市東山1-3-40。営業時間9:00〜17:00（コラボドリンクのラストオーダーは16:00）。コラボメニュー「金箔ホットチョコレート」全2種（オカルト研究会・特殊交易部）各900円（税込）、お一人様1品まで。1品につきオリジナルコースター（全7種）ランダム1枚付き。11月の全日程と12月の土日のみ入店整理券を配布し、一部日程は事前予約（LivePocket）が必要。情報源：ブルアカ5周年スタンプラリー公式特設ページ、LivePocket。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5728406,
+   "lng": 136.6655572,
+   "coordApprox": false
   },
   {
    "area": "ひがし茶屋街・東山",
@@ -698,7 +743,10 @@
    "sourceUrl": "https://x.com/Rachel00717513/status/2123984176768835973?a=4DJkCJoj2A4v4abEJQM&s=20",
    "supplement": "住所：石川県金沢市橋場町3-18 HATCHi金沢1F。営業時間9:00〜17:00、月曜定休（祝日の場合は翌火曜休み）。コラボメニュー「金箔ソフトクリーム」全2種（オカルト研究会・特殊交易部）各1,500円（税込）、お一人様2品まで。1品につきオリジナルコースター（全7種）ランダム1枚付き。一部日程は事前予約（LivePocket）が必要。普段はシナモンロールやキッシュ、加賀棒茶などを提供するカフェ。情報源：ブルアカ5周年スタンプラリー公式特設ページ、LivePocket、Tripadvisor。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5712406,
+   "lng": 136.6642378,
+   "coordApprox": false
   },
   {
    "area": "近江町市場",
@@ -721,7 +769,10 @@
    "sourceUrl": "https://x.com/Rachel00717513/status/2123984176768835973?a=4DJkCJoj2A4v4abEJQM&s=20",
    "supplement": "住所：石川県金沢市青草町88 近江町いちば館2F。看板の近江町海鮮丼は2,900円と報じられている（約18種のネタ）。営業時間は平日11:00〜17:00、土日祝10:30〜17:00（水曜は15:00〜15:30までの情報あり）。同じいちば館B1Fにはスタンプラリーのスポット①中島めんやがある。行列ができやすい店として紹介されている。情報源：近江町市場海鮮丼ガイド（kcm.gr.jp）。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5715847,
+   "lng": 136.6561303,
+   "coordApprox": false
   },
   {
    "area": "金沢駅",
@@ -742,7 +793,10 @@
    "sourceUrl": "https://x.com/Rachel00717513/status/2123984176768835973?a=4DJkCJoj2A4v4abEJQM&s=20",
    "supplement": "住所：石川県金沢市堀川新町3-1（金沢駅前）。ブルアカ金沢さんぽのメイン会場で、グッズ販売・フォトスポットを展開。特設催事期間は2026年11月13日〜11月23日で、この期間の物販エリア入場は事前予約（mogily・LINE）が必要。購入制限あり（ぬいぐるみ等は種類数×1個まで、アクリルスタンド等は種類数×3個まで）。3,000円ごとにノベルティステッカー、10,000円以上で紙ショッパー。景品引換は11月23日まで。11月23日以降の販売店舗は別途告知。情報源：ブルアカ5周年スタンプラリー公式特設ページ。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5793308,
+   "lng": 136.6498439,
+   "coordApprox": false
   },
   {
    "area": "",
@@ -784,7 +838,10 @@
    "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
    "supplement": "石川県金沢市広坂2-1-1。営業時間は公式HPで要確認。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5624108,
+   "lng": 136.6578861,
+   "coordApprox": false
   },
   {
    "area": "金沢市内",
@@ -807,7 +864,10 @@
    "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
    "supplement": "石川県金沢市出羽町3-1。開館時間・休館日は公式HPで要確認。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5584758,
+   "lng": 136.662405,
+   "coordApprox": false
   },
   {
    "area": "金沢市内",
@@ -830,7 +890,10 @@
    "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
    "supplement": "石川県金沢市本多町3-2-29。開館時間・休館日は公式HPで要確認。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5587703,
+   "lng": 136.6605578,
+   "coordApprox": false
   },
   {
    "area": "近江町市場",
@@ -851,7 +914,10 @@
    "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
    "supplement": "石川県金沢市青草町88 近江町いちば館B1F。営業時間は公式HPで要確認。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5715847,
+   "lng": 136.6561303,
+   "coordApprox": true
   },
   {
    "area": "ひがし茶屋街・東山",
@@ -875,7 +941,10 @@
    "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
    "supplement": "石川県金沢市東山1-3-27。営業時間は公式HPで要確認。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5739711,
+   "lng": 136.6663183,
+   "coordApprox": false
   },
   {
    "area": "金沢市内",
@@ -898,7 +967,10 @@
    "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
    "supplement": "石川県金沢市長町2-4-36。営業時間は公式HPで要確認。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5644525,
+   "lng": 136.6495667,
+   "coordApprox": false
   },
   {
    "area": "金沢市内",
@@ -922,7 +994,10 @@
    "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
    "supplement": "石川県金沢市竪町24。営業時間は公式HPで要確認。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5588006,
+   "lng": 136.6548281,
+   "coordApprox": false
   },
   {
    "area": "金沢駅",
@@ -946,7 +1021,10 @@
    "sourceUrl": "https://bluearchive-5thstamp.jp/kanazawa/",
    "supplement": "石川県金沢市堀川新町3-1。営業時間は公式HPで要確認。",
    "visited": false,
-   "wantToGo": false
+   "wantToGo": false,
+   "lat": 36.5793308,
+   "lng": 136.6498439,
+   "coordApprox": false
   },
   {
    "area": "片町・香林坊",
@@ -966,7 +1044,10 @@
    "supplement": "1859（安政6）年創業の日本茶専門店で、竪町商店街にある。住所：石川県金沢市竪町3（アニメイト金沢＝竪町24と同じ竪町通りの少し先で、投稿の位置説明と一致）。電話076-221-0982。営業時間9:30〜18:30（時期により異なる場合あり）。町家を改装した店内で中庭（日本庭園）を眺めながらカフェ利用でき、加賀棒茶パフェ・抹茶パフェ等の和スイーツがある。一番人気は自家焙煎の加賀棒茶パウダーをかけた「まかないパフェ」（まっぷるでは860円と掲載、価格は変動の可能性あり）。加賀棒茶は一番茶の茎を自家焙煎したもので、浅煎りの「極」と深煎りの「香」など茶葉の購入も可能。金沢駅から香林坊方面バスで香林坊下車・徒歩約6分。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/Harmonia_No700/status/2124318594100256991?a=XhjUNiz7HJDjz1CnN-A&s=19"
+   "sourceUrl": "https://x.com/Harmonia_No700/status/2124318594100256991?a=XhjUNiz7HJDjz1CnN-A&s=19",
+   "lat": 36.5576561,
+   "lng": 136.6554614,
+   "coordApprox": false
   },
   {
    "area": "片町・香林坊",
@@ -986,7 +1067,10 @@
    "supplement": "1859年（安政6年）創業の老舗日本茶専門店。住所: 石川県金沢市竪町3（竪町商店街、香林坊近く）。電話: 076-221-0982。営業時間: 9:30～18:30、定休日は元旦のみとされる（NAVITIME等）。金沢駅からバスで香林坊下車・徒歩約6分（まっぷる）。看板メニューは「ほっこり加賀棒茶パフェ」1,000円（星野リゾート みちくさガイド）で、自家製棒茶パウダーのソフトクリームや棒茶ジュレなど棒茶尽くし。一番茶の茎のみを使い自家焙煎。1941年建築の町家を改装した店内で、4種の加賀棒茶の飲み比べもできる。カフェ営業は1985年頃から。投稿のとおり加賀棒茶はお土産として店頭購入も可能。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/0CDRRCsWpS6RWfs/status/2124348105688822160?a=kIapzZmRRLLNxscrCrc&s=19"
+   "sourceUrl": "https://x.com/0CDRRCsWpS6RWfs/status/2124348105688822160?a=kIapzZmRRLLNxscrCrc&s=19",
+   "lat": 36.5576561,
+   "lng": 136.6554614,
+   "coordApprox": false
   },
   {
    "area": "金沢駅",
@@ -1008,7 +1092,10 @@
    "supplement": "昭和9年（1934年）創業の金沢の老舗。定番きんつばは北海道産大納言小豆の粒あんを薄皮で包んだもの（公式サイト）。賞味期限（未開封・製造日から）は10月〜5月が14日、6月〜9月が10日とされる。金沢市内の主な店舗: 金沢駅・金沢百番街あんと店（金沢駅構内、あんと営業時間8:30〜20:00）、東山茶屋街店（金沢市東山1-5-9、9:00〜17:00）、元町店（金沢市元町2-4-8、9:00〜18:00）、香林坊大和店（香林坊1-1-1 大和B1F、10:00〜19:00）。東山茶屋街店2階には能登大納言小豆を使った甘味処「和味」併設。旅行者は金沢駅あんと店が最も買いやすい。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/parallel12372/status/2124398320345043237?a=AAbEnoThJVfleSuaww8&s=19"
+   "sourceUrl": "https://x.com/parallel12372/status/2124398320345043237?a=AAbEnoThJVfleSuaww8&s=19",
+   "lat": 36.5789114,
+   "lng": 136.6483744,
+   "coordApprox": true
   },
   {
    "area": "金沢駅",
@@ -1027,7 +1114,10 @@
    "supplement": "公式サイト（notoushi.com/ushijyu）より：創業100年超の老舗肉屋・寺岡畜産が営む能登牛専門店で、紹介文は「上質な能登牛や国産牛をお重とひつまぶしで楽しめます。一品料理には能登牛・能登豚の生ハムなど自家製加工品も」。住所：〒920-0854 石川県金沢市安江町12-4。電話076-255-2917。金沢駅から徒歩9分、近江町市場から徒歩5分。営業時間11:00〜15:00（L.O.14:30）／17:30〜20:30（L.O.20:00）、定休日は火曜日・月曜はランチ営業のみ（公式）。座席24席（カウンター8・テーブル16）、駐車場なし。公式グランドメニュー：うし重 松2,750円・竹3,960円・梅5,940円・葵8,250円、うしまぶし4,950円（いずれも税込、小鉢・味噌汁・漬物付き）。一品には能登牛ローストビーフ1,650円、能登牛プレミアム生ハム1,430円、能登牛の牛すじ煮込み1,210円など。公式は満席の場合があるため来店前の予約・問い合わせを推奨。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/tama_yorosiku/status/2124444058873717090?a=FyT7u2wfu0i5M7z3Xps&s=19"
+   "sourceUrl": "https://x.com/tama_yorosiku/status/2124444058873717090?a=FyT7u2wfu0i5M7z3Xps&s=19",
+   "lat": 36.5738181,
+   "lng": 136.6548414,
+   "coordApprox": false
   },
   {
    "area": "金沢駅",
@@ -1049,7 +1139,10 @@
    "supplement": "公式サイト：住所は石川県金沢市此花町3-10 ライブ1ビル1階、金沢駅東口から徒歩約3分。電話076-255-2550。営業時間は夜17:00-22:00（料理L.O.21:00／ドリンクL.O.21:30）、昼11:00-15:00は金・土・日のみ（料理L.O.14:00／ドリンクL.O.14:30）、定休日は水曜。独自配合の赤酢シャリと北陸の魚介が売りで、のどぐろ・白がす海老・白海老・生本鮪などが並び、1貫から自由に注文できる。OmakaseGuideによればカウンターのみ、おまかせは5貫から、事前予約は受けずウォークイン中心。価格は公式・同ガイドとも明記なし。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/331_mnsb/status/2124713642084217280?a=YZog2iBaquv0sivm_XY&s=19"
+   "sourceUrl": "https://x.com/331_mnsb/status/2124713642084217280?a=YZog2iBaquv0sivm_XY&s=19",
+   "lat": 36.5768178,
+   "lng": 136.6512803,
+   "coordApprox": true
   },
   {
    "area": "片町・香林坊",
@@ -1072,7 +1165,10 @@
    "supplement": "住所：石川県金沢市片町2-9-15。電話：076-221-2646。営業時間：11:00〜15:20（L.O.14:45）／17:00〜20:30（L.O.19:50）。定休日：水曜（祝日の場合は翌平日が振替）、月に1回程度の不定休あり。駐車場なし。昭和32年（1957年）創業の洋食店で、金沢名物ハントンライス発祥の店のひとつとされる。代表メニュー「ハントンライス」1,350円、小（1,250円）・大（1,600円）あり（dメニューニュース／みちくさガイド掲載価格）。他にポークカツ、グリルチキン、ドリア風のタンバライスなど昔ながらの洋食メニューがある。平日14時頃は並ばず入れることも多いとの情報あり。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/sakusakubou12/status/2124695610515398956?a=B3NOINz_c5ljGNURERY&s=19"
+   "sourceUrl": "https://x.com/sakusakubou12/status/2124695610515398956?a=B3NOINz_c5ljGNURERY&s=19",
+   "lat": 36.5619414,
+   "lng": 136.6519361,
+   "coordApprox": false
   },
   {
    "area": "",
@@ -1112,7 +1208,10 @@
    "supplement": "プリン専門店。住所: 金沢市東山1-13-10（ひがし茶屋街）。電話: 076-225-7749。営業時間10:00〜18:00、定休日は火曜（金沢旅物語の店舗一覧・2026/09/28確認時点）。イートイン・食べ歩き対応の店として掲載。瓶プリンのほか金箔ソフトなども口コミで確認できる。",
    "visited": false,
    "wantToGo": false,
-   "sourceUrl": "https://x.com/deathmomoi128/status/2124378651760492875?a=J7F3EeGlwhEJ71HMs7g&s=19"
+   "sourceUrl": "https://x.com/deathmomoi128/status/2124378651760492875?a=J7F3EeGlwhEJ71HMs7g&s=19",
+   "lat": 36.5727656,
+   "lng": 136.6672239,
+   "coordApprox": false
   }
  ],
  "memo": {
